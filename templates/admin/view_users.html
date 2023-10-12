@@ -1,0 +1,19 @@
+{% extends "admin/index.html" %}
+{% block body %}
+    <table class="table table-striped">
+        <tr style="color:#fff;background: #000;">
+            <th>#</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td align="center"><img src="{{ i.photo }}" height="100" width="100"><br><b>{{ i.name }}</b></td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.phone }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

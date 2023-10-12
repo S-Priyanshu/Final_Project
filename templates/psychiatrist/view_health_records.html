@@ -1,0 +1,19 @@
+{% extends "psychiatrist/index.html" %}
+{% block body %}
+    <table class="table table-striped">
+        <tr style="color:#fff;background: #000;">
+            <th>#</th>
+            <th>DATE</th>
+            <th>TIME</th>
+            <th>MENTAL HEALTH STATE</th>
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ i.date }}</td>
+                <td>{{ i.time }}</td>
+                <td>{{ i.health_state }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "user/index.html" %}
+{% block body %}
+<form method="post" action="">
+    <table class="table table-active" style="width: 500px;"align="center">
+        <tr>
+            <td align="center"><b>{{ qn }}</b></td>
+        </tr>
+
+        <tr>
+            <td>
+                <textarea rows="5" cols="45" name="annn" class="form-control" ></textarea>
+            </td>
+        </tr>
+
+        <tr>
+                <td align="center">
+                    {% if cnt < 3 %}
+                        <input type="submit" name="btn" value="NEXT" class="btn btn-info" />
+                    {% else %}
+                        <input type="submit" name="btn" value="FINISH" class="btn btn-success" />
+                    {% endif %}
+                </td>
+            </tr>
+    </table>
+</form>
+{% endblock %}

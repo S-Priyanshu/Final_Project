@@ -1,0 +1,22 @@
+{% extends "psychiatrist/index.html" %}
+{% block body %}
+    <form method="post" action="" onsubmit="return validate()">
+        <table class="table table-active" style="width: 500px;"align="center">
+            <tr>
+                <td>Date</td>
+                <td><input type="date" name="t1" id="t1" class="form-control" required /></td>
+            </tr>
+            <tr>
+                <td>From Time</td>
+                <td><input type="time" name="t2" id="t2" class="form-control" required /></td>
+            </tr>
+            <tr>
+                <td>To time</td>
+                <td><input type="time" name="t3" id="t3" class="form-control" required /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="ADD" class="btn btn-success" /></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

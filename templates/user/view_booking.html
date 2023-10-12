@@ -1,0 +1,24 @@
+{% extends "user/index.html" %}
+{% block body %}
+    <table class="table table-striped">
+        <tr style="color:#fff;background: #000;">
+            <th>#</th>
+            <th>DATE</th>
+            <th>NAME</th>
+            <th>QUALIFICATION</th>
+            <th>SCHEDULE</th>
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ i.date }}</td>
+                <td align="center">
+                    <img src="{{ i.image }}" height="100" width="100" />
+                    <br><b>{{ i.name }}</b>
+                </td>
+                <td>{{ i.qualification }}</td>
+                <td>{{ i.from_time }} - {{ i.to_time }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

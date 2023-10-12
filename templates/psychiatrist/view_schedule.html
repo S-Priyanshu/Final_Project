@@ -1,0 +1,23 @@
+{% extends "psychiatrist/index.html" %}
+{% block body %}
+    <table class="table table-striped">
+        <tr style="color:#fff;background: #000;">
+            <th>#</th>
+            <th>DATE</th>
+            <th>FROM TIME</th>
+            <th>TO TIME</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ i.date }}</td>
+                <td>{{ i.from_time }}</td>
+                <td>{{ i.to_time }}</td>
+                <td><a href="/psych_delete_sched/{{ i.sched_id }}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a> </td>
+                <td><a href="/psych_view_booking/{{ i.sched_id }}#aaa" class="btn btn-success">Bookings</a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

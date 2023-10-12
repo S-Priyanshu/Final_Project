@@ -1,0 +1,14 @@
+{% extends "user/index.html" %}
+{% block body %}
+    <form method="post" action="" onsubmit="return validate()">
+        <table class="table table-active" style="width: 500px;"align="center">
+            <tr>
+                <td>Complaint</td>
+                <td><textarea name="t1" rows="5" cols="45" class="form-control" required ></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="SEND" class="btn btn-success" /></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

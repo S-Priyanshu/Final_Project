@@ -1,0 +1,21 @@
+{% extends "user/index.html" %}
+{% block body %}
+    <table class="table table-striped">
+        <tr style="color:#fff;background: #000;">
+            <th>#</th>
+            <th>DATE</th>
+            <th>COMPLAINT</th>
+            <th>REPLY</th>
+            <th></th>
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ i.date }}</td>
+                <td>{{ i.complaint }}</td>
+                <td>{{ i.reply }}</td>
+                <td><a href="/user_delete_comp/{{ i.comp_id }}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "user/index.html" %}
+{% block body %}
+    <form method="post" action="" >
+        <table class="table table-active" style="width: 500px;"align="center">
+            <tr>
+                <td>
+                    <h2>Question {{ cnt + 1 }}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><b>{{ qn }}</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <input type="radio" name="radio" id="r1" value="0" />Not at all<br>
+                        <input type="radio" name="radio" id="r2" value="1" />Moderately<br>
+                        <input type="radio" name="radio" id="r3" value="2" />Extremely
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    {% if cnt < 9 %}
+                        <input type="submit" name="btn" value="NEXT" class="btn btn-info" />
+                    {% else %}
+                        <input type="submit" name="btn" value="FINISH" class="btn btn-success" />
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

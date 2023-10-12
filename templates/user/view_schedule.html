@@ -1,0 +1,21 @@
+{% extends "user/index.html" %}
+{% block body %}
+    <table class="table table-striped">
+        <tr style="color:#fff;background: #000;">
+            <th>#</th>
+            <th>DATE</th>
+            <th>FROM TIME</th>
+            <th>TO TIME</th>
+            <th></th>
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ i.date }}</td>
+                <td>{{ i.from_time }}</td>
+                <td>{{ i.to_time }}</td>
+                <td><a href="/user_book_schedule/{{ i.sched_id }}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Book</a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

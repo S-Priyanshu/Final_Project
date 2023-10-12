@@ -1,0 +1,22 @@
+{% extends "user/index.html" %}
+{% block body %}
+    <form method="post" action="" onsubmit="return validate()">
+        <table class="table table-active" style="width: 500px;"align="center">
+            <tr>
+                <td colspan="2"><img src="{{ data.photo }}" height="150" width="150" /></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{ data.name }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{ data.email }}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>{{ data.phone }}</td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
